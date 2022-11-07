@@ -1,8 +1,0 @@
-user table
-adress table
-product table
-cart table
-command-line table
-command table
-↡
-all the junction table
