@@ -9,13 +9,12 @@ CREATE TABLE if not exists user (
 );
 
 
-
 CREATE TABLE if not exists Product (
-Id INTEGER PRIMARY KEY NOT NULL,
-Name VARCHAR(50) NOT NULL,
-Price INTEGER NOT NULL,
-Desciption VARCHAR(50),
-image VARCHAR(50)
+	Id INTEGER PRIMARY KEY NOT NULL,
+	Name VARCHAR(50) NOT NULL,
+	Price INTEGER NOT NULL,
+	Description VARCHAR(50),
+	Image VARCHAR(50)
 );
 
 
@@ -31,34 +30,35 @@ CREATE TABLE if not exists Cart (
 
 
 CREATE TABLE if not exists Address (
-Id INT PRIMARY KEY NOT NULL,
-Street VARCHAR(80)  NOT NULL, 
-NumberStreet INTEGER,
-City VARCHAR(20),
-Country VARCHAR(30),
-Floor INTEGER
+	Id INTEGER PRIMARY KEY NOT NULL,
+	Street VARCHAR(80)  NOT NULL, 
+	NumberStreet INTEGER,
+	City VARCHAR(20),
+	Country VARCHAR(30),
+	Floor INTEGER
 );
+
+
 
 CREATE TABLE if not EXISTS invoices (
-id int PRIMARY Key not null,
-CustomerId int ,
-InvoiceDate VARCHAR(50),
-BillingAddress VARCHAR(50),
-BillingState VARCHAR(50),
-BillingCountry VARCHAR(50),
-BillingPostalCode VARCHAR(50),
-Total int ,
-FOREIGN KEY (CustomerId) REFERENCES USER(Id)
+	Id INTEGER PRIMARY Key NOT NULL,
+	CustomerId int ,
+	InvoiceDate VARCHAR(50),
+	BillingAddress VARCHAR(50),
+	BillingState VARCHAR(50),
+	BillingCountry VARCHAR(50),
+	BillingPostalCode VARCHAR(50),
+	Total INTEGER ,
+	FOREIGN KEY (CustomerId) REFERENCES user(Id)
 );
+
 
 CREATE TABLE if not EXISTS Command(
-id int PRIMARY Key NOT NULL,
-Date TIME,
-Montant int,
-address VARCHAR(100),
-Total int,
-Delivery TIME
+	Id INTEGER PRIMARY Key NOT NULL,
+	Date TIME,
+	Montant int,
+	address VARCHAR(100),
+	Total int,
+	Delivery TIME
 );
-
-
 

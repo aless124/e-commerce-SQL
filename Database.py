@@ -24,6 +24,7 @@ for i in range(10):
     first_name = faker.first_name()
     last_name = faker.last_name()
     password = faker.password()
+    password = str(hash(password))
     Email = faker.email()
     Gender = sexe
     Age = random.randint(18,99)
