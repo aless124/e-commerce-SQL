@@ -1,6 +1,7 @@
 import sqlite3
 from faker import Faker
 import random
+
 faker = Faker()
 
 # Boolean for Gender
